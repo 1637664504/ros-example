@@ -1,0 +1,23 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.o": true,
+        "**/*.o.cmd": true,
+        "**/*.a": true,
+        "**/*.so": true,
+        "**/*.tar": true,
+        "**/*.gz": true,
+        "**/build": true,
+        "**/devel": true,
+        "**/log": true,
+      },
+      "search.exclude": {
+        "**/install": true,
+        "**/log": true,
+        "**/build": true,
+    },
+}
