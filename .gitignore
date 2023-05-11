@@ -35,3 +35,4 @@
 # ros
 *build/*
 *devel/*
+ros1/catkin_ws/src/turtlebot3_simulations
