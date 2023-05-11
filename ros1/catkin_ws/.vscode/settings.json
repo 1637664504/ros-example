@@ -1,0 +1,31 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.o": true,
+        "**/*.o.cmd": true,
+        "**/*.a": true,
+        "**/*.so": true,
+        "**/*.tar": true,
+        "**/*.gz": true,
+        "**/build": true,
+        "**/devel": true,
+        "**/log": true,
+      },
+      "search.exclude": {
+        "**/install": true,
+        "**/log": true,
+        "**/build": true,
+    },
+    "python.autoComplete.extraPaths": [
+      "/home/liuj/1_Data/5_ros_example/ros1/catkin_ws/devel/lib/python3/dist-packages",
+      "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+      "/home/liuj/1_Data/5_ros_example/ros1/catkin_ws/devel/lib/python3/dist-packages",
+      "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+}
