@@ -33,6 +33,8 @@
 
 
 # ros
-*build/*
-*devel/*
+build/
+devel/
+.catkin_workspace
+ros1/src/CMakeLists.txt
 ros1/catkin_ws/src/turtlebot3_simulations

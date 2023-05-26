@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="4_launch" type="1_打印launch_param.py" name="test1_py" output="screen">
+        <param name="haha" value="123" type="str"/>
+        <param name="abc" value="234" type="int"/>
+    </node>
+</launch>
