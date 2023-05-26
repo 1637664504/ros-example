@@ -11,5 +11,10 @@ if __name__ == '__main__':
     for it in result:
         var = rospy.get_param(it)
         rospy.loginfo("%s:%s"%(it,var))
-    
+
+    var1 = rospy.get_param('/test1_py/haha')
+    var2 = rospy.get_param('/test1_py/abc')
+    print(var1,type(var1))
+    print(var2,type(var2))
+
     rospy.spin()

@@ -1,5 +1,5 @@
 <launch>
-    <node pkg="4_launch" type="1_打印launch_param.py" name="test1_py" output="screen">
+    <node pkg="4_launch" type="2_launch_param读写.py" name="test1_py" output="screen">
         <param name="haha" value="123" type="str"/>
         <param name="abc" value="234" type="int"/>
     </node>
