@@ -3,9 +3,7 @@
     <arg name="compensate_yaw" default= "2.0"/>
     <arg name="compensate_roll" default= "3.0"/>
     <!-- 传递变量 /> -->
-    <node pkg="4_launch" type="5_launch_arg_多个变量.py" name="launch_many_args" 
+    <node pkg="ch4_launch" type="5_launch_arg_多个变量.py" name="launch_many_args" 
         output="screen" args="$(arg compensate_pitch) $(arg compensate_yaw) $(arg compensate_roll)">
     </node>
-    <!-- <include file="$(find 4_launch)/launch/1_打印launch_param.launch"/>"> -->
-    <include file="src/1_ros_基础/4_launch/launch/1_打印launch_param.launch"/>
 </launch>
