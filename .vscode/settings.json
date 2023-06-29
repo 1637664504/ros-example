@@ -83,4 +83,5 @@
       "variant": "cpp",
       "bit": "cpp"
     },
+    "python.formatting.provider": "yapf",
 }
