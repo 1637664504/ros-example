@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="joy_test" name="joy_node" type="joy_node">
+    <param name="pub_delay_" value="0.1" type="doble"/>
+    <param name="coalesce_interval" value="0.1" type="doble"/>
+  </node>
+</launch>
