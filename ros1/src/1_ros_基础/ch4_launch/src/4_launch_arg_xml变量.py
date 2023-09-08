@@ -13,9 +13,10 @@ if __name__ == '__main__':
 
 ''' 
 结果:
-
-[INFO] [1685094946.751086]: /home/liuj/1_Data/5_ros_example/ros1/src/1_ros_基础/4_launch/src/4_launch_arg_xml变量.py
-[INFO] [1685094946.751684]: aaa123
-[INFO] [1685094946.752280]: __name:=launch_arg_xml_localVar
-[INFO] [1685094946.752850]: __log:=/home/liuj/.ros/log/36954ff2-fba7-11ed-860b-00155db16574/launch_arg_xml_localVar-1.log
+liuj debug
+/home/liuj/1_data/6_ros-robot-example/ros1/src/1_ros_基础/ch4_launch/src/4_launch_arg_xml变量.py
+aaa123
+18
+__name:=launch_arg_xml_localVar
+__log:=/home/liuj/.ros/log/42dd4d9a-4c89-11ee-8d99-bbdee33537f0/launch_arg_xml_localVar-1.log
 '''

@@ -1,7 +1,8 @@
 <launch>
     <arg name="arg-name" default= "aaa123"/>
+    <arg name="age" default= "18"/>
     <!-- 传递变量 /> -->
     <param name="foo" value="$(arg arg-name)" />
-    <node pkg="ch4_launch" type="4_launch_arg_xml变量.py" name="launch_arg_xml_localVar" output="screen" args="$(arg arg-name)">
+    <node pkg="ch4_launch" type="4_launch_arg_xml变量.py" name="launch_arg_xml_localVar" output="screen" args="$(arg arg-name) $(arg age)">
     </node>
 </launch>
