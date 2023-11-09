@@ -13,27 +13,27 @@ roslint_cpp()
 catkin_package(DEPENDS sensor_msgs)
 
 # Look for <linux/joystick.h>
-include(CheckIncludeFiles)
-check_include_files(linux/joystick.h HAVE_LINUX_JOYSTICK_H)
+# include(CheckIncludeFiles)
+# check_include_files(linux/joystick.h HAVE_LINUX_JOYSTICK_H)
 
-if(CATKIN_ENABLE_TESTING)
-  roslint_add_test()
-endif()
+# if(CATKIN_ENABLE_TESTING)
+#   roslint_add_test()
+# endif()
 
-if(HAVE_LINUX_JOYSTICK_H)
-  include_directories(msg/cpp ${catkin_INCLUDE_DIRS})
-  add_executable(joy_node src/joy_node.cpp)
-  target_link_libraries(joy_node ${catkin_LIBRARIES})
+# if(HAVE_LINUX_JOYSTICK_H)
+#   include_directories(msg/cpp ${catkin_INCLUDE_DIRS})
+#   add_executable(joy_node src/joy_node.cpp)
+#   target_link_libraries(joy_node ${catkin_LIBRARIES})
 
-# Install targets
-  install(TARGETS joy_node
-    ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-    LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-    RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
-else()
-  message("Warning: no <linux/joystick.h>; won't build joy node")
-endif()
+# # Install targets
+#   install(TARGETS joy_node
+#     ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#     LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#     RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+# else()
+#   message("Warning: no <linux/joystick.h>; won't build joy node")
+# endif()
 
-install(DIRECTORY migration_rules scripts config launch
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-  USE_SOURCE_PERMISSIONS)
+# install(DIRECTORY migration_rules scripts config launch
+#   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+#   USE_SOURCE_PERMISSIONS)
