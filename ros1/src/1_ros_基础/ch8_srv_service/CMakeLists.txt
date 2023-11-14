@@ -165,6 +165,8 @@ target_link_libraries(6_client_string.out
   ${catkin_LIBRARIES}
 )
 
+catkin_python_setup()
+
 #############
 ## Install ##
 #############
