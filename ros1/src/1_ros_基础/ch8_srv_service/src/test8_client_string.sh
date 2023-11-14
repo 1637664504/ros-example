@@ -1,0 +1,1 @@
+rosservice call /python_test_server_string "get"

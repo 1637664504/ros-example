@@ -87,6 +87,6 @@
       "variant": "cpp",
       "bit": "cpp"
     },
-    "python.formatting.provider": "yapf",
+    "python.formatting.provider": "black",
     "explorerExclude.backup": {},
 }
