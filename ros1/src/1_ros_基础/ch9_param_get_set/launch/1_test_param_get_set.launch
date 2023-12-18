@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="ch9_param_get_set" type="test1_param_get_set_node" name="test1_param_get_set_node" output="screen">
+        <param name="rate" value="20" type="int"/>
+    </node>
+</launch>

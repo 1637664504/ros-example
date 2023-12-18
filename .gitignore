@@ -37,6 +37,7 @@
 # ros
 build/
 devel/
+install/
 .catkin_workspace
 ros1/src/CMakeLists.txt
 ros1/catkin_ws/src/turtlebot3_simulations

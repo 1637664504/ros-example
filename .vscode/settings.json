@@ -17,7 +17,9 @@
       "**/log": true,
       "**/*.out": true,
       "**/.sconsign.dblite": true,
-      "**/.catkin_workspace": true
+      "**/.catkin_workspace": true,
+      "**/install": true,
+      "src/CMakeLists.txt": true
     },
       "search.exclude": {
         "**/install": true,

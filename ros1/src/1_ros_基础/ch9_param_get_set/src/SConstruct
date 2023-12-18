@@ -1,0 +1,21 @@
+import os
+# ros发行版本
+ros_distro=os.getenv("ROS_DISTRO")
+print('env ros',ros_distro)
+
+env = Environment()
+ros_include = ' -I /opt/ros/%s/include/'%(ros_distro)
+ros_libdir = '/opt/ros/%s/lib'%(ros_distro)
+ros_lib_dep = ['roscpp','rosconsole']
+
+
+#编译选项
+env['CCFLAGS'] = '-g -O0 -Wall '+ros_include
+
+# 链接选项
+env['LIBPATH'] = ros_libdir
+env['LIBS'] = ros_lib_dep
+env['RPATH'] = ros_libdir
+env['LINKFLAGS'] = '-Wl,--copy-dt-needed-entries'
+
+env.Program('test1_param_get_set.out', 'test1_param_get_set.cc')
