@@ -19,3 +19,11 @@ env['RPATH'] = ros_libdir
 env['LINKFLAGS'] = '-Wl,--copy-dt-needed-entries'
 
 env.Program('test1_MultiArray.out', 'test1_MultiArray.cc')
+env.Program('1_多线程发布_publish.out', '1_多线程发布_publish.cc')
+env.Program('2_多线程订阅_subscribe.out', '2_多线程订阅_subscribe.cc')
+env.Program('3_多线程订阅_限定订阅频率_subscribe.out','3_多线程订阅_限定订阅频率_subscribe.cc')
+env.Program('5_性能测试_发布_publish_head.out','5_性能测试_发布_publish_head.cc')
+env.Program('6_多线程订阅_限定订阅频率_增加队列_subscribe.out','6_多线程订阅_限定订阅频率_增加队列_subscribe.cc')
+env.Program('7_多线程发布_订阅.out','7_多线程发布_订阅.cc')
+env.Program('8_性能测试_订阅_spin.out','8_性能测试_订阅_spin.cc')
+env.Program('9_性能测试_订阅_spinOnce.out','9_性能测试_订阅_spinOnce.cc')

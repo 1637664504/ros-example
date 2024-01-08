@@ -15,7 +15,7 @@ int main(int argc, char* argv[])
     ros::Publisher pub_uint8_array = n.advertise<std_msgs::UInt8MultiArray>("/test/UInt8MultiArray", 5);
     std_msgs::UInt8MultiArray multiArray_msg;
 
-    ros::Rate rate(0.5);
+    ros::Rate rate(10);
     vector<uint8_t> data = { 0x1, 0x2, 0x4, 0x8 };
     auto it = data.begin();
     int idx = 10;

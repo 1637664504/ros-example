@@ -19,3 +19,5 @@ env['RPATH'] = ros_libdir
 env['LINKFLAGS'] = '-Wl,--copy-dt-needed-entries'
 
 env.Program('test_uint8_array.out', 'test_uint8_array.cc')
+env.Program('1_pub发布_在类里面.out','1_pub发布_在类里面.cc')
+env.Program('2_sub订阅_在类里面.out', '2_sub订阅_在类里面.cc')
