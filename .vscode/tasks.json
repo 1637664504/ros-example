@@ -1,0 +1,35 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "cpp_build",
+			"command": "/usr/bin/cpp",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}/${fileBasenameNoExtension}"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "编译器: /usr/bin/cpp"
+		},
+        {
+            "type": "process",
+            "label": "scons",
+            "command": "/usr/bin/scons",
+            "args": [
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            }
+        }
+	]
+}

@@ -91,4 +91,7 @@
     },
     "python.formatting.provider": "black",
     "explorerExclude.backup": {},
+    "C_Cpp.default.includePath": [
+      "/opt/ros/noetic/include",
+    ]
 }

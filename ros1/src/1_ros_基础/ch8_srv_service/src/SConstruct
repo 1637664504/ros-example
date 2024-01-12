@@ -1,0 +1,56 @@
+import os
+
+# 1.编译器
+if os.system("which clang"):
+    env = Environment()
+else:
+    # clang编译器
+    env = Environment(tools=["default", "clang"])
+    env["CC"] = ["clang"]
+    env["CXX"] = ["clang++"]
+
+
+# 2.ros版本 include + lib
+ros_distro = os.getenv("ROS_DISTRO")
+print("env ros", ros_distro)
+ros_include = " -I /opt/ros/%s/include" % (ros_distro)
+ros_libdir = ["/opt/ros/%s/lib" % (ros_distro)]
+ros_lib_dep = ["roscpp", "rosconsole", "serial"]
+
+
+def auto_get_ros_dir():
+    filePath = os.getcwd()
+    idx = filePath.find("src")
+    project_dir = filePath[0:idx]
+    print("项目位置:%s" % (project_dir))
+    return project_dir
+
+
+# 3.ros项目路径 msg,srv include + lib
+project_dir = auto_get_ros_dir()
+project_dev = project_dir + "devel/"  # 自动获取ros devel路径
+# userName=os.getenv("USER")
+# project_dev='/home/%s/3_work/3_navigation/devel/'%(userName)  # 填写完整ros devel路径
+project_include = " -I " + project_dev + "include"
+project_libdir = [project_dev + "lib"]
+
+# 4.自己库 include + 链接库名
+# self_lib_include = ' -I'+project_dir+'src/hal/lib/libcrc/include'
+# ros_lib_dep += ['liblibcrc']
+
+# -------------------------------
+# -------------------------------
+# <1编译选项
+env["CCFLAGS"] = ros_include + project_include
+env["CCFLAGS"] += " -DDEBUG"  # Debug log开关
+env["CCFLAGS"] += " -ggdb3 -O0"  # gdb 调试开关
+
+# <2链接选项
+env["LIBPATH"] = ros_libdir + project_libdir
+env["RPATH"] = ros_libdir + project_libdir
+env["LIBS"] = ros_lib_dep
+env["LINKFLAGS"] = "-Wl,--copy-dt-needed-entries"
+
+# <3编译
+env.Program("5_service_string.out", "5_service_string.cc")
+env.Program("6_client_string.out", "6_client_string.cc")
