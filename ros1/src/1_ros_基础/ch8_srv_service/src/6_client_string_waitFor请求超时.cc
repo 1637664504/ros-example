@@ -8,17 +8,20 @@ int main(int argc, char** argv)
     ros::NodeHandle n;
     ros::ServiceClient client = n.serviceClient<common::diagInfo>("/test_string");
 
+
     // 一直超时
     // client.waitForExistence();
 
+    // INFO:方案1
     // 超时5S
-    // if (!client.waitForExistence(ros::Duration(5.0))) {
-    //     ROS_ERROR("Service did not exist");
-    //     return -1;
-    // }
+    if (!client.waitForExistence(ros::Duration(5.0))) {
+        ROS_ERROR("Service did not exist");
+        return -1;
+    }
 
+    // INFO: 方案2
     // 超时5s
-    ros::service::waitForService("/test_string", ros::Duration(5.0));
+    // ros::service::waitForService("/test_string", ros::Duration(5.0));
 
     ROS_INFO("Waiting for service up");
 

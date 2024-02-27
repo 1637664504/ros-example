@@ -160,7 +160,7 @@ target_link_libraries(5_service_string.out
   ${catkin_LIBRARIES}
 )
 
-add_executable(6_client_string.out src/6_client_string.cc)
+add_executable(6_client_string.out src/6_client_string_waitFor请求超时.cc)
 target_link_libraries(6_client_string.out
   ${catkin_LIBRARIES}
 )
