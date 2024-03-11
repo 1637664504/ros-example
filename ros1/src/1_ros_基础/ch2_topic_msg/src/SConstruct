@@ -10,7 +10,7 @@ ros_lib_dep = ['roscpp','rosconsole']
 
 
 #编译选项
-env['CCFLAGS'] = '-g -O0 -Wall '+ros_include
+env['CCFLAGS'] = '-g3 -O0 -Wall '+ros_include
 
 # 链接选项
 env['LIBPATH'] = ros_libdir
@@ -22,3 +22,5 @@ env.Program('test_uint8_array.out', 'test_uint8_array.cc')
 env.Program('1_pub发布_在类里面.out','1_pub发布_在类里面.cc')
 env.Program('2_sub订阅_在类里面.out', '2_sub订阅_在类里面.cc')
 env.Program('3_sub订阅成员_和callback函数_在类里面.out', '3_sub订阅成员_和callback函数_在类里面.cc')
+env.Program('11_pub_UInt8MultiArray数组_发布.out', '11_pub_UInt8MultiArray数组_发布.cc')
+env.Program('12_sub_UInt8MultiArray数组_订阅.out', '12_sub_UInt8MultiArray数组_订阅.cc')
