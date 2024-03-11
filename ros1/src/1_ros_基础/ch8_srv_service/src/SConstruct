@@ -53,4 +53,4 @@ env["LINKFLAGS"] = "-Wl,--copy-dt-needed-entries"
 
 # <3编译
 env.Program("5_service_string.out", "5_service_string.cc")
-env.Program("6_client_string.out", "6_client_string.cc")
+env.Program("6_client_string_waitFor请求超时.out", "6_client_string_waitFor请求超时.cc")
